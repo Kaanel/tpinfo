@@ -26,6 +26,8 @@
 #define PARITY_ERROR (1 << UPE0)
 #define DATA_OVERRUN (1 << DOR0)
 
+#define RX_BUFFER_SIZE0 8
+
 int flag = 0;
 volatile char donnee;
 
@@ -104,4 +106,15 @@ void USART_putsln(unsigned char *str) {
   USART_puts(str);
   USART_Transmit(10);
   USART_Transmit(13);
+}
+
+void getBuffer(){
+  char rx_buffer0[RX_BUFFER_SIZE0];
+  rx_buffer0[rx_wr_index0++]=data;
+ if (rx_wr_index0 == RX_BUFFER_SIZE0) rx_wr_index0=0;
+ if (++rx_counter0 == RX_BUFFER_SIZE0)
+ {
+ rx_counter0=0;
+ rx_buffer_overflow0=1;
+ }
 }
