@@ -1,0 +1,363 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="fr">
+  <compounddef id="tp__ese__atelier1_8ino" kind="file" language="C++">
+    <compoundname>tp_ese_atelier1.ino</compoundname>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="tp__ese__atelier1_8ino_1a802b2b582b121e4632aa9a491d503720" prot="public" static="no">
+        <name>FOSC</name>
+        <initializer>16000000</initializer>
+        <briefdescription>
+<para>Fréquence du microcontrôleur. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tp_ese_atelier1.ino" line="20" column="9" bodyfile="tp_ese_atelier1.ino" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="tp__ese__atelier1_8ino_1a62634036639f88eece6fbf226b45f84b" prot="public" static="no">
+        <name>BAUD</name>
+        <initializer>9600</initializer>
+        <briefdescription>
+<para>Taux de bauds pour la communication série. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tp_ese_atelier1.ino" line="21" column="9" bodyfile="tp_ese_atelier1.ino" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="tp__ese__atelier1_8ino_1a711e9130c825a7269c8c87dbb57a85e0" prot="public" static="no">
+        <name>MYUBRR</name>
+        <initializer><ref refid="tp__ese__atelier1_8ino_1a802b2b582b121e4632aa9a491d503720" kindref="member">FOSC</ref> / 16 / <ref refid="tp__ese__atelier1_8ino_1a62634036639f88eece6fbf226b45f84b" kindref="member">BAUD</ref> - 1</initializer>
+        <briefdescription>
+<para>Valeur de l&apos;UBRR pour le calcul du taux de bauds. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tp_ese_atelier1.ino" line="22" column="9" bodyfile="tp_ese_atelier1.ino" bodystart="22" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="tp__ese__atelier1_8ino_1adf916204820072417ed73a32de1cefcf" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int flag</definition>
+        <argsstring></argsstring>
+        <name>flag</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Drapeau indiquant la réception de données sur USART0. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tp_ese_atelier1.ino" line="24" column="5" bodyfile="tp_ese_atelier1.ino" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="tp__ese__atelier1_8ino_1a39758d42d41fc605725e59be4766bde5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int flag3</definition>
+        <argsstring></argsstring>
+        <name>flag3</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Drapeau indiquant la réception de données sur USART3. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tp_ese_atelier1.ino" line="25" column="5" bodyfile="tp_ese_atelier1.ino" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="tp__ese__atelier1_8ino_1a840291bc02cba5474a4cb46a9b9566fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(void)</argsstring>
+        <name>main</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Fonction principale. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tp_ese_atelier1.ino" line="29" column="5" bodyfile="tp_ese_atelier1.ino" bodystart="29" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="tp__ese__atelier1_8ino_1a88e32db0cad75219c51253f5c1052fc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(USART3_RX_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>USART3_RX_vect</type>
+        </param>
+        <briefdescription>
+<para>Interruption de réception sur USART3. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tp_ese_atelier1.ino" line="50" column="1" bodyfile="tp_ese_atelier1.ino" bodystart="50" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="tp__ese__atelier1_8ino_1a09ce999e15ad60b8a3f07d08af1946f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(USART_RX_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>USART_RX_vect</type>
+        </param>
+        <briefdescription>
+<para>Interruption de réception sur USART0. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tp_ese_atelier1.ino" line="56" column="1" bodyfile="tp_ese_atelier1.ino" bodystart="56" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="tp__ese__atelier1_8ino_1a99f79737b2f8bf945b4c169c69e3e3eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void USART_Init</definition>
+        <argsstring>(unsigned int ubrr)</argsstring>
+        <name>USART_Init</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>ubrr</declname>
+        </param>
+        <briefdescription>
+<para>Fonction d&apos;initialisation de la communication série. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ubrr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Valeur de l&apos;UBRR pour le taux de bauds. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tp_ese_atelier1.ino" line="63" column="6" bodyfile="tp_ese_atelier1.ino" bodystart="63" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="tp__ese__atelier1_8ino_1ab8c416106cf1aff4ccdb3da4860fc179" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void USART_Transmit</definition>
+        <argsstring>(unsigned char data)</argsstring>
+        <name>USART_Transmit</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Fonction de transmission sur USART0. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Octet à transmettre. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tp_ese_atelier1.ino" line="86" column="6" bodyfile="tp_ese_atelier1.ino" bodystart="86" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="tp__ese__atelier1_8ino_1a3386982085d31269a6e776c3be5712b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void USART_Transmit3</definition>
+        <argsstring>(unsigned char data)</argsstring>
+        <name>USART_Transmit3</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Fonction de transmission sur USART3. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Octet à transmettre. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tp_ese_atelier1.ino" line="97" column="6" bodyfile="tp_ese_atelier1.ino" bodystart="97" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="tp__ese__atelier1_8ino_1a48435142a44158906915a0de70dcab5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char USART_Receive</definition>
+        <argsstring>(void)</argsstring>
+        <name>USART_Receive</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Fonction de réception sur USART0. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Octet reçu. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tp_ese_atelier1.ino" line="108" column="15" bodyfile="tp_ese_atelier1.ino" bodystart="108" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="tp__ese__atelier1_8ino_1a50767addbd207ccc41e33ad71411b27e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char USART_Receive3</definition>
+        <argsstring>(void)</argsstring>
+        <name>USART_Receive3</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Fonction de réception sur USART3. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Octet reçu. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tp_ese_atelier1.ino" line="119" column="15" bodyfile="tp_ese_atelier1.ino" bodystart="119" bodyend="125"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Transmission d&apos;un code ASCII à l&apos;aide d&apos;une liaison série. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Note: Basé sur la datasheet ATmega328P.</title><para></para>
+</simplesect>
+<simplesect kind="par"><title>Documentation: https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf</title><para></para>
+</simplesect>
+<simplesect kind="author"><para>Github: <ulink url="https://github.com/kaanel">https://github.com/kaanel</ulink> Email: <ulink url="mailto:romainmarteaud@gmail.com">romainmarteaud@gmail.com</ulink></para>
+</simplesect>
+<simplesect kind="rcs"><title>Name</title><para>Liaison série </para>
+</simplesect>
+<simplesect kind="rcs"><title>Revision</title><para>1.0 </para>
+</simplesect>
+<simplesect kind="rcs"><title>RCSfile</title><para>main.c,v </para>
+</simplesect>
+<simplesect kind="rcs"><title>Date</title><para>2023/11/27 11:03 </para>
+</simplesect>
+<linebreak/>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FOSC<sp/>16000000<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BAUD<sp/>9600<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MYUBRR<sp/>FOSC<sp/>/<sp/>16<sp/>/<sp/>BAUD<sp/>-<sp/>1<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tp__ese__atelier1_8ino_1adf916204820072417ed73a32de1cefcf" kindref="member">flag</ref><sp/>=<sp/>0;<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tp__ese__atelier1_8ino_1a39758d42d41fc605725e59be4766bde5" kindref="member">flag3</ref><sp/>=<sp/>0;<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tp__ese__atelier1_8ino_1a840291bc02cba5474a4cb46a9b9566fe" kindref="member">main</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><ref refid="tp__ese__atelier1_8ino_1a99f79737b2f8bf945b4c169c69e3e3eb" kindref="member">USART_Init</ref>(<ref refid="tp__ese__atelier1_8ino_1a711e9130c825a7269c8c87dbb57a85e0" kindref="member">MYUBRR</ref>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>sei();<sp/></highlight><highlight class="comment">//<sp/>Activation<sp/>des<sp/>interruptions<sp/>globales.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="tp__ese__atelier1_8ino_1a39758d42d41fc605725e59be4766bde5" kindref="member">flag3</ref><sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tp__ese__atelier1_8ino_1a3386982085d31269a6e776c3be5712b3" kindref="member">USART_Transmit3</ref>(UDR3);<sp/></highlight><highlight class="comment">//<sp/>Transmission<sp/>sur<sp/>USART3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tp__ese__atelier1_8ino_1a39758d42d41fc605725e59be4766bde5" kindref="member">flag3</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>_delay_ms(1);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="tp__ese__atelier1_8ino_1adf916204820072417ed73a32de1cefcf" kindref="member">flag</ref><sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tp__ese__atelier1_8ino_1ab8c416106cf1aff4ccdb3da4860fc179" kindref="member">USART_Transmit</ref>(UDR0);<sp/></highlight><highlight class="comment">//<sp/>Transmission<sp/>sur<sp/>USART0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tp__ese__atelier1_8ino_1adf916204820072417ed73a32de1cefcf" kindref="member">flag</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>_delay_ms(1);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><ref refid="tp__ese__atelier1_8ino_1a88e32db0cad75219c51253f5c1052fc0" kindref="member">ISR</ref>(USART3_RX_vect)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><ref refid="tp__ese__atelier1_8ino_1a39758d42d41fc605725e59be4766bde5" kindref="member">flag3</ref><sp/>=<sp/>1;<sp/></highlight><highlight class="comment">//<sp/>Indique<sp/>la<sp/>réception<sp/>de<sp/>données<sp/>sur<sp/>USART3.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><ref refid="tp__ese__atelier1_8ino_1a88e32db0cad75219c51253f5c1052fc0" kindref="member">ISR</ref>(USART_RX_vect)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><ref refid="tp__ese__atelier1_8ino_1adf916204820072417ed73a32de1cefcf" kindref="member">flag</ref><sp/>=<sp/>1;<sp/></highlight><highlight class="comment">//<sp/>Indique<sp/>la<sp/>réception<sp/>de<sp/>données<sp/>sur<sp/>USART0.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="tp__ese__atelier1_8ino_1a99f79737b2f8bf945b4c169c69e3e3eb" kindref="member">USART_Init</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ubrr)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Configuration<sp/>du<sp/>taux<sp/>de<sp/>bauds<sp/>pour<sp/>USART0<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>UBRR0H<sp/>=<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>char)(ubrr<sp/>&gt;&gt;<sp/>8);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>UBRR0L<sp/>=<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>char)ubrr;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Configuration<sp/>du<sp/>taux<sp/>de<sp/>bauds<sp/>pour<sp/>USART3<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>UBRR3H<sp/>=<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>char)(ubrr<sp/>&gt;&gt;<sp/>8);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>UBRR3L<sp/>=<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>char)ubrr;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Activation<sp/>du<sp/>récepteur,<sp/>du<sp/>transmetteur<sp/>et<sp/>de<sp/>l&apos;interruption<sp/>de<sp/>réception</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>UCSR0B<sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>RXEN0)<sp/>|<sp/>(1<sp/>&lt;&lt;<sp/>TXEN0)<sp/>|<sp/>(1<sp/>&lt;&lt;<sp/>RXCIE0);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>UCSR3B<sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>RXEN3)<sp/>|<sp/>(1<sp/>&lt;&lt;<sp/>TXEN3)<sp/>|<sp/>(1<sp/>&lt;&lt;<sp/>RXCIE3);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Configuration<sp/>du<sp/>format<sp/>de<sp/>trame:<sp/>8<sp/>bits<sp/>de<sp/>données,<sp/>1<sp/>bit<sp/>d&apos;arrêt<sp/>pour<sp/>USART0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>UCSR0C<sp/>=<sp/>(3<sp/>&lt;&lt;<sp/>UCSZ00);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Configuration<sp/>du<sp/>format<sp/>de<sp/>trame:<sp/>8<sp/>bits<sp/>de<sp/>données,<sp/>1<sp/>bit<sp/>d&apos;arrêt<sp/>pour<sp/>USART3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>UCSR3C<sp/>=<sp/>(3<sp/>&lt;&lt;<sp/>UCSZ30);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="tp__ese__atelier1_8ino_1ab8c416106cf1aff4ccdb3da4860fc179" kindref="member">USART_Transmit</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>data)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Attente<sp/>du<sp/>tampon<sp/>de<sp/>transmission<sp/>vide<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!(UCSR0A<sp/>&amp;<sp/>(1<sp/>&lt;&lt;<sp/>UDRE0)))</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Placement<sp/>des<sp/>données<sp/>dans<sp/>le<sp/>tampon,<sp/>puis<sp/>transmission<sp/>des<sp/>données<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>UDR0<sp/>=<sp/>data;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="tp__ese__atelier1_8ino_1a3386982085d31269a6e776c3be5712b3" kindref="member">USART_Transmit3</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>data)<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Attente<sp/>du<sp/>tampon<sp/>de<sp/>transmission<sp/>vide<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!(UCSR3A<sp/>&amp;<sp/>(1<sp/>&lt;&lt;<sp/>UDRE3)))</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Placement<sp/>des<sp/>données<sp/>dans<sp/>le<sp/>tampon,<sp/>puis<sp/>transmission<sp/>des<sp/>données<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/>UDR3<sp/>=<sp/>data;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="tp__ese__atelier1_8ino_1a48435142a44158906915a0de70dcab5c" kindref="member">USART_Receive</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Attente<sp/>de<sp/>la<sp/>réception<sp/>de<sp/>données<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!(UCSR0A<sp/>&amp;<sp/>(1<sp/>&lt;&lt;<sp/>RXC0)))</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Récupération<sp/>et<sp/>retour<sp/>des<sp/>données<sp/>reçues<sp/>depuis<sp/>le<sp/>tampon<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>UDR0;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="tp__ese__atelier1_8ino_1a50767addbd207ccc41e33ad71411b27e" kindref="member">USART_Receive3</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Attente<sp/>de<sp/>la<sp/>réception<sp/>de<sp/>données<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!(UCSR3A<sp/>&amp;<sp/>(1<sp/>&lt;&lt;<sp/>RXC3)))</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Récupération<sp/>et<sp/>retour<sp/>des<sp/>données<sp/>reçues<sp/>depuis<sp/>le<sp/>tampon<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>UDR3;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tp_ese_atelier1.ino"/>
+  </compounddef>
+</doxygen>

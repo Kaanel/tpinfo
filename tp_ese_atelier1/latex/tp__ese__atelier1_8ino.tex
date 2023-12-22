@@ -1,0 +1,229 @@
+\doxysection{Référence du fichier tp\+\_\+ese\+\_\+atelier1.\+ino}
+\hypertarget{tp__ese__atelier1_8ino}{}\label{tp__ese__atelier1_8ino}\index{tp\_ese\_atelier1.ino@{tp\_ese\_atelier1.ino}}
+
+
+Transmission d\textquotesingle{}un code ASCII à l\textquotesingle{}aide d\textquotesingle{}une liaison série.  
+
+
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{tp__ese__atelier1_8ino_a802b2b582b121e4632aa9a491d503720}{FOSC}}~16000000
+\begin{DoxyCompactList}\small\item\em Fréquence du microcontrôleur. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{tp__ese__atelier1_8ino_a62634036639f88eece6fbf226b45f84b}{BAUD}}~9600
+\begin{DoxyCompactList}\small\item\em Taux de bauds pour la communication série. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{tp__ese__atelier1_8ino_a711e9130c825a7269c8c87dbb57a85e0}{MYUBRR}}~\mbox{\hyperlink{tp__ese__atelier1_8ino_a802b2b582b121e4632aa9a491d503720}{FOSC}} / 16 / \mbox{\hyperlink{tp__ese__atelier1_8ino_a62634036639f88eece6fbf226b45f84b}{BAUD}} -\/ 1
+\begin{DoxyCompactList}\small\item\em Valeur de l\textquotesingle{}UBRR pour le calcul du taux de bauds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{tp__ese__atelier1_8ino_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em Fonction principale. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{tp__ese__atelier1_8ino_a88e32db0cad75219c51253f5c1052fc0}{ISR}} (USART3\+\_\+\+RX\+\_\+vect)
+\begin{DoxyCompactList}\small\item\em Interruption de réception sur USART3. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{tp__ese__atelier1_8ino_a09ce999e15ad60b8a3f07d08af1946f9}{ISR}} (USART\+\_\+\+RX\+\_\+vect)
+\begin{DoxyCompactList}\small\item\em Interruption de réception sur USART0. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tp__ese__atelier1_8ino_a99f79737b2f8bf945b4c169c69e3e3eb}{USART\+\_\+\+Init}} (unsigned int ubrr)
+\begin{DoxyCompactList}\small\item\em Fonction d\textquotesingle{}initialisation de la communication série. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tp__ese__atelier1_8ino_ab8c416106cf1aff4ccdb3da4860fc179}{USART\+\_\+\+Transmit}} (unsigned char data)
+\begin{DoxyCompactList}\small\item\em Fonction de transmission sur USART0. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tp__ese__atelier1_8ino_a3386982085d31269a6e776c3be5712b3}{USART\+\_\+\+Transmit3}} (unsigned char data)
+\begin{DoxyCompactList}\small\item\em Fonction de transmission sur USART3. \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{tp__ese__atelier1_8ino_a48435142a44158906915a0de70dcab5c}{USART\+\_\+\+Receive}} (void)
+\begin{DoxyCompactList}\small\item\em Fonction de réception sur USART0. \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{tp__ese__atelier1_8ino_a50767addbd207ccc41e33ad71411b27e}{USART\+\_\+\+Receive3}} (void)
+\begin{DoxyCompactList}\small\item\em Fonction de réception sur USART3. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{tp__ese__atelier1_8ino_adf916204820072417ed73a32de1cefcf}{flag}} = 0
+\begin{DoxyCompactList}\small\item\em Drapeau indiquant la réception de données sur USART0. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{tp__ese__atelier1_8ino_a39758d42d41fc605725e59be4766bde5}{flag3}} = 0
+\begin{DoxyCompactList}\small\item\em Drapeau indiquant la réception de données sur USART3. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Transmission d\textquotesingle{}un code ASCII à l\textquotesingle{}aide d\textquotesingle{}une liaison série. 
+
+\begin{DoxyParagraph}{Note\+: Basé sur la datasheet ATmega328P.}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Documentation\+: https\+://ww1.microchip.com/downloads/en/\+Device\+Doc/\+Atmel-\/7810-\/\+Automotive-\/\+Microcontrollers-\/\+ATmega328\+P\+\_\+\+Datasheet.pdf}
+
+\end{DoxyParagraph}
+\begin{DoxyAuthor}{Auteur}
+Github\+: \href{https://github.com/kaanel}{\texttt{ https\+://github.\+com/kaanel}} Email\+: \href{mailto:romainmarteaud@gmail.com}{\texttt{ romainmarteaud@gmail.\+com}}
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Name}
+Liaison série 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Revision}
+1.\+0 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{RCSfile}
+main.\+c,v 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Date}
+2023/11/27 11\+:03 
+\end{DoxyParagraph}
+~\newline
+
+
+\doxysubsection{Documentation des macros}
+\Hypertarget{tp__ese__atelier1_8ino_a62634036639f88eece6fbf226b45f84b}\label{tp__ese__atelier1_8ino_a62634036639f88eece6fbf226b45f84b} 
+\index{tp\_ese\_atelier1.ino@{tp\_ese\_atelier1.ino}!BAUD@{BAUD}}
+\index{BAUD@{BAUD}!tp\_ese\_atelier1.ino@{tp\_ese\_atelier1.ino}}
+\doxysubsubsection{\texorpdfstring{BAUD}{BAUD}}
+{\footnotesize\ttfamily \#define BAUD~9600}
+
+
+
+Taux de bauds pour la communication série. 
+
+\Hypertarget{tp__ese__atelier1_8ino_a802b2b582b121e4632aa9a491d503720}\label{tp__ese__atelier1_8ino_a802b2b582b121e4632aa9a491d503720} 
+\index{tp\_ese\_atelier1.ino@{tp\_ese\_atelier1.ino}!FOSC@{FOSC}}
+\index{FOSC@{FOSC}!tp\_ese\_atelier1.ino@{tp\_ese\_atelier1.ino}}
+\doxysubsubsection{\texorpdfstring{FOSC}{FOSC}}
+{\footnotesize\ttfamily \#define FOSC~16000000}
+
+
+
+Fréquence du microcontrôleur. 
+
+\Hypertarget{tp__ese__atelier1_8ino_a711e9130c825a7269c8c87dbb57a85e0}\label{tp__ese__atelier1_8ino_a711e9130c825a7269c8c87dbb57a85e0} 
+\index{tp\_ese\_atelier1.ino@{tp\_ese\_atelier1.ino}!MYUBRR@{MYUBRR}}
+\index{MYUBRR@{MYUBRR}!tp\_ese\_atelier1.ino@{tp\_ese\_atelier1.ino}}
+\doxysubsubsection{\texorpdfstring{MYUBRR}{MYUBRR}}
+{\footnotesize\ttfamily \#define MYUBRR~\mbox{\hyperlink{tp__ese__atelier1_8ino_a802b2b582b121e4632aa9a491d503720}{FOSC}} / 16 / \mbox{\hyperlink{tp__ese__atelier1_8ino_a62634036639f88eece6fbf226b45f84b}{BAUD}} -\/ 1}
+
+
+
+Valeur de l\textquotesingle{}UBRR pour le calcul du taux de bauds. 
+
+
+
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{tp__ese__atelier1_8ino_a88e32db0cad75219c51253f5c1052fc0}\label{tp__ese__atelier1_8ino_a88e32db0cad75219c51253f5c1052fc0} 
+\index{tp\_ese\_atelier1.ino@{tp\_ese\_atelier1.ino}!ISR@{ISR}}
+\index{ISR@{ISR}!tp\_ese\_atelier1.ino@{tp\_ese\_atelier1.ino}}
+\doxysubsubsection{\texorpdfstring{ISR()}{ISR()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ISR (\begin{DoxyParamCaption}\item[{USART3\+\_\+\+RX\+\_\+vect}]{ }\end{DoxyParamCaption})}
+
+
+
+Interruption de réception sur USART3. 
+
+\Hypertarget{tp__ese__atelier1_8ino_a09ce999e15ad60b8a3f07d08af1946f9}\label{tp__ese__atelier1_8ino_a09ce999e15ad60b8a3f07d08af1946f9} 
+\index{tp\_ese\_atelier1.ino@{tp\_ese\_atelier1.ino}!ISR@{ISR}}
+\index{ISR@{ISR}!tp\_ese\_atelier1.ino@{tp\_ese\_atelier1.ino}}
+\doxysubsubsection{\texorpdfstring{ISR()}{ISR()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ISR (\begin{DoxyParamCaption}\item[{USART\+\_\+\+RX\+\_\+vect}]{ }\end{DoxyParamCaption})}
+
+
+
+Interruption de réception sur USART0. 
+
+\Hypertarget{tp__ese__atelier1_8ino_a840291bc02cba5474a4cb46a9b9566fe}\label{tp__ese__atelier1_8ino_a840291bc02cba5474a4cb46a9b9566fe} 
+\index{tp\_ese\_atelier1.ino@{tp\_ese\_atelier1.ino}!main@{main}}
+\index{main@{main}!tp\_ese\_atelier1.ino@{tp\_ese\_atelier1.ino}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Fonction principale. 
+
+\Hypertarget{tp__ese__atelier1_8ino_a99f79737b2f8bf945b4c169c69e3e3eb}\label{tp__ese__atelier1_8ino_a99f79737b2f8bf945b4c169c69e3e3eb} 
+\index{tp\_ese\_atelier1.ino@{tp\_ese\_atelier1.ino}!USART\_Init@{USART\_Init}}
+\index{USART\_Init@{USART\_Init}!tp\_ese\_atelier1.ino@{tp\_ese\_atelier1.ino}}
+\doxysubsubsection{\texorpdfstring{USART\_Init()}{USART\_Init()}}
+{\footnotesize\ttfamily void USART\+\_\+\+Init (\begin{DoxyParamCaption}\item[{unsigned int}]{ubrr }\end{DoxyParamCaption})}
+
+
+
+Fonction d\textquotesingle{}initialisation de la communication série. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ubrr} & Valeur de l\textquotesingle{}UBRR pour le taux de bauds. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{tp__ese__atelier1_8ino_a48435142a44158906915a0de70dcab5c}\label{tp__ese__atelier1_8ino_a48435142a44158906915a0de70dcab5c} 
+\index{tp\_ese\_atelier1.ino@{tp\_ese\_atelier1.ino}!USART\_Receive@{USART\_Receive}}
+\index{USART\_Receive@{USART\_Receive}!tp\_ese\_atelier1.ino@{tp\_ese\_atelier1.ino}}
+\doxysubsubsection{\texorpdfstring{USART\_Receive()}{USART\_Receive()}}
+{\footnotesize\ttfamily unsigned char USART\+\_\+\+Receive (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Fonction de réception sur USART0. 
+
+\begin{DoxyReturn}{Renvoie}
+Octet reçu. 
+\end{DoxyReturn}
+\Hypertarget{tp__ese__atelier1_8ino_a50767addbd207ccc41e33ad71411b27e}\label{tp__ese__atelier1_8ino_a50767addbd207ccc41e33ad71411b27e} 
+\index{tp\_ese\_atelier1.ino@{tp\_ese\_atelier1.ino}!USART\_Receive3@{USART\_Receive3}}
+\index{USART\_Receive3@{USART\_Receive3}!tp\_ese\_atelier1.ino@{tp\_ese\_atelier1.ino}}
+\doxysubsubsection{\texorpdfstring{USART\_Receive3()}{USART\_Receive3()}}
+{\footnotesize\ttfamily unsigned char USART\+\_\+\+Receive3 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Fonction de réception sur USART3. 
+
+\begin{DoxyReturn}{Renvoie}
+Octet reçu. 
+\end{DoxyReturn}
+\Hypertarget{tp__ese__atelier1_8ino_ab8c416106cf1aff4ccdb3da4860fc179}\label{tp__ese__atelier1_8ino_ab8c416106cf1aff4ccdb3da4860fc179} 
+\index{tp\_ese\_atelier1.ino@{tp\_ese\_atelier1.ino}!USART\_Transmit@{USART\_Transmit}}
+\index{USART\_Transmit@{USART\_Transmit}!tp\_ese\_atelier1.ino@{tp\_ese\_atelier1.ino}}
+\doxysubsubsection{\texorpdfstring{USART\_Transmit()}{USART\_Transmit()}}
+{\footnotesize\ttfamily void USART\+\_\+\+Transmit (\begin{DoxyParamCaption}\item[{unsigned char}]{data }\end{DoxyParamCaption})}
+
+
+
+Fonction de transmission sur USART0. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em data} & Octet à transmettre. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{tp__ese__atelier1_8ino_a3386982085d31269a6e776c3be5712b3}\label{tp__ese__atelier1_8ino_a3386982085d31269a6e776c3be5712b3} 
+\index{tp\_ese\_atelier1.ino@{tp\_ese\_atelier1.ino}!USART\_Transmit3@{USART\_Transmit3}}
+\index{USART\_Transmit3@{USART\_Transmit3}!tp\_ese\_atelier1.ino@{tp\_ese\_atelier1.ino}}
+\doxysubsubsection{\texorpdfstring{USART\_Transmit3()}{USART\_Transmit3()}}
+{\footnotesize\ttfamily void USART\+\_\+\+Transmit3 (\begin{DoxyParamCaption}\item[{unsigned char}]{data }\end{DoxyParamCaption})}
+
+
+
+Fonction de transmission sur USART3. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em data} & Octet à transmettre. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des variables}
+\Hypertarget{tp__ese__atelier1_8ino_adf916204820072417ed73a32de1cefcf}\label{tp__ese__atelier1_8ino_adf916204820072417ed73a32de1cefcf} 
+\index{tp\_ese\_atelier1.ino@{tp\_ese\_atelier1.ino}!flag@{flag}}
+\index{flag@{flag}!tp\_ese\_atelier1.ino@{tp\_ese\_atelier1.ino}}
+\doxysubsubsection{\texorpdfstring{flag}{flag}}
+{\footnotesize\ttfamily int flag = 0}
+
+
+
+Drapeau indiquant la réception de données sur USART0. 
+
+\Hypertarget{tp__ese__atelier1_8ino_a39758d42d41fc605725e59be4766bde5}\label{tp__ese__atelier1_8ino_a39758d42d41fc605725e59be4766bde5} 
+\index{tp\_ese\_atelier1.ino@{tp\_ese\_atelier1.ino}!flag3@{flag3}}
+\index{flag3@{flag3}!tp\_ese\_atelier1.ino@{tp\_ese\_atelier1.ino}}
+\doxysubsubsection{\texorpdfstring{flag3}{flag3}}
+{\footnotesize\ttfamily int flag3 = 0}
+
+
+
+Drapeau indiquant la réception de données sur USART3. 
+
